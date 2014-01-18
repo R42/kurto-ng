@@ -1,6 +1,8 @@
 // Generated on 2014-01-18 using generator-angular 0.7.1
 'use strict';
 
+var _ = require('lodash');
+
 // # Globbing
 // for performance reasons we're only matching one level down:
 // 'test/spec/{,*/}*.js'
@@ -16,7 +18,7 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
 
   // Define the configuration for all the tasks
-  grunt.initConfig({
+  var gruntConfig = {
 
     // Project settings
     yeoman: {
@@ -350,7 +352,11 @@ module.exports = function (grunt) {
         singleRun: true
       }
     }
-  });
+  };
+
+  var neatConfig = _.merge.apply({}, _.values(require('./build/cfg')));
+  gruntConfig = _.merge({}, gruntConfig, neatConfig);
+  grunt.initConfig(gruntConfig);
 
 
   grunt.registerTask('serve', function (target) {
