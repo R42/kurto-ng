@@ -10,7 +10,7 @@ angular.module('appApp', [
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        controller: 'ShortenCtrl'
       })
       .when('/last', {
         templateUrl: 'views/last.html',

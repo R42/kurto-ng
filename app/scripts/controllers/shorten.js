@@ -3,6 +3,8 @@
 angular.module('appApp')
   .controller('ShortenCtrl', ['$scope', 'Shorten',
                     function ( $scope ,  Shorten ) {
+    $scope.$emit('changePage', 'Home');
+
     $scope.url = {
       original: '',
       shortened: ''
