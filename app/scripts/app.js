@@ -12,6 +12,10 @@ angular.module('appApp', [
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/last', {
+        templateUrl: 'views/last.html',
+        controller: 'LastCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
